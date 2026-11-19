@@ -6,7 +6,7 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 19:54:08 by sebasilve         #+#    #+#             */
-/*   Updated: 2026/11/19 17:50:12 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/19 18:25:38 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,31 @@ void	ft_error()
 	exit(1);
 }
 
+void	ft_free_tab(char	**tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+		i++;
+	while (i > 0)
+		free(tab[i--]);
+	free(tab);
+}
+
+void	ft_free_stack(t_node *stack)
+{
+	t_node	*ptr;
+
+	ptr = *a;
+	a = a->next;
+	while (a->next)
+	{
+		free(ptr);
+		ptr = *a;
+		a = a->next;
+	}
+}
 
 void	ft_parse(t_node **a, int	argc, char	*str)
 {
@@ -35,7 +60,7 @@ void	ft_parse(t_node **a, int	argc, char	*str)
 			if (!ft_add(a, numbers[j]))
 			{
 				ft_free_stack(a);
-				
+				ft_free_tab(numbers);
 				ft_error();
 			}
 			j++;
