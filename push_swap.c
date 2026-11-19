@@ -6,7 +6,7 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 19:54:08 by sebasilve         #+#    #+#             */
-/*   Updated: 2026/11/18 16:23:27 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/19 17:21:31 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,19 @@ void	ft_error()
 
 void	ft_parse(t_node **a, int	argc, char	*str)
 {
-	int	i;
+	int		i;
+	int		j;
 	char	**numbers;
 
 	i = 1;
 	while (i < argc)
-		numbers = ft_split(argv[i++], " ");
-	i = 0;
-	while (numbers[i++])
-		ft_add(a, numbers[i]);
+	{
+		numbers = ft_split(argv[i], " ");
+		j = 0;
+		while (numbers[j++])
+			ft_add(a, numbers[j]);
+		i++;
+	}
 	i = 0;
 	while ()
 }
