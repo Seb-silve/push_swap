@@ -6,11 +6,11 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 16:52:16 by sebsilve          #+#    #+#             */
-/*   Updated: 2026/11/04 09:40:00 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 18:15:19 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 static size_t	ft_count_words(char const *s, char c)
 {

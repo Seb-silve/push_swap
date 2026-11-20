@@ -6,11 +6,11 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 09:37:21 by sebsilve          #+#    #+#             */
-/*   Updated: 2026/11/18 11:01:48 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 18:15:15 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 int	ft_atoi(const char *str)
 {

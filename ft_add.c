@@ -6,11 +6,11 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:03:04 by sebasilve         #+#    #+#             */
-/*   Updated: 2026/11/19 17:43:17 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 18:15:09 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 
 static int	ft_has_value(t_node *a, int value)

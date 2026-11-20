@@ -6,11 +6,11 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 13:53:24 by sebasilve         #+#    #+#             */
-/*   Updated: 2026/11/16 01:08:08 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 18:14:34 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "push_swap.h"
 
 void	sa(t_node **a)
  {

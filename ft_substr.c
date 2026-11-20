@@ -6,11 +6,11 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 20:09:54 by sebsilve          #+#    #+#             */
-/*   Updated: 2026/11/04 09:40:55 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 18:15:23 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
