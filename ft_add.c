@@ -6,20 +6,20 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 11:03:04 by sebasilve         #+#    #+#             */
-/*   Updated: 2026/11/20 18:15:09 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 18:44:07 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 
-static int	ft_has_value(t_node *a, int value)
+static int	ft_has_value(t_node **a, int value)
 {
-	while (a)
+	while (*a)
 	{
-		if (a->value == value)
+		if ((*a)->value == value)
 			return (1);
-		a = a->next;
+		*a = (*a)->next;
 	}
 	return (0);
 }
@@ -33,7 +33,7 @@ int	ft_add(t_node **a, char *number)
 	if (!ft_isnumber(number))
 		return (0);
 	value = ft_atol(number);
-	if (value < INT_MIN || value > INT_MAX || ft_has_value(*a, value))
+	if (value < INT_MIN || value > INT_MAX || ft_has_value(a, value))
 		return (0);
 	new = malloc(sizeof(t_node));
 	if (!new)

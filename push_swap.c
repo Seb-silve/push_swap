@@ -6,7 +6,7 @@
 /*   By: sebasilve <seb.silves@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 19:54:08 by sebasilve         #+#    #+#             */
-/*   Updated: 2026/11/20 18:17:53 by sebasilve        ###   ########.fr       */
+/*   Updated: 2026/11/20 19:09:18 by sebasilve        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,16 @@ void	ft_free_tab(char	**tab)
 	free(tab);
 }
 
-void	ft_free_stack(t_node *stack)
+void	ft_free_stack(t_node **stack)
 {
 	t_node	*next;
 
 	
-	while (stack)
+	while (*stack)
 	{
-		next = stack->next;
-		free(stack);
-		stack = next;
+		next = (*stack)->next;
+		free(*stack);
+		*stack = next;
 	}
 }
 
@@ -68,7 +68,7 @@ void	ft_parse(t_node **a, int	argc, char	**argv)
 		numbers = ft_split(argv[i], ' ');
 		if (!numbers || !numbers[0] || !ft_add_tokens(a, numbers))
 		{
-			ft_free_stack(*a);
+			ft_free_stack(a);
 			if (numbers)
 				ft_free_tab(numbers);
 			ft_error();
@@ -87,7 +87,7 @@ int	main(int argc, char **argv)
 	b = null;
 	if (argc < 2)
 		return (0);
-	ft_parse(a, argc, argv[i]);
+	ft_parse(&a, argc, argv[i]);
 	
 }
 0, 2, 4, "1 3 6", 8
